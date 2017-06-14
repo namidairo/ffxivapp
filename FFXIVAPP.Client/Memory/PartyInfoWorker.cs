@@ -93,9 +93,9 @@ namespace FFXIVAPP.Client.Memory
                     AppContextHelper.Instance.RaiseNewPartyAddedEntries(readResult.NewParty);
                 }
 
-                if (readResult.PreviousParty.Any())
+                if (readResult.RemovedParty.Any())
                 {
-                    AppContextHelper.Instance.RaiseNewPartyRemovedEntries(readResult.PreviousParty.Keys.ToList());
+                    AppContextHelper.Instance.RaiseNewPartyRemovedEntries(readResult.RemovedParty.Keys.ToList());
                 }
 
                 #endregion

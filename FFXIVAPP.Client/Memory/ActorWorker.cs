@@ -146,17 +146,17 @@ namespace FFXIVAPP.Client.Memory
                     AppContextHelper.Instance.RaiseNewPCAddedEntries(readResult.NewPC);
                 }
 
-                if (readResult.PreviousMonster.Any())
+                if (readResult.RemovedMonster.Any())
                 {
-                    AppContextHelper.Instance.RaiseNewMonsterRemovedEntries(readResult.PreviousMonster.Keys.ToList());
+                    AppContextHelper.Instance.RaiseNewMonsterRemovedEntries(readResult.RemovedMonster.Keys.ToList());
                 }
-                if (readResult.PreviousNPC.Any())
+                if (readResult.RemovedNPC.Any())
                 {
-                    AppContextHelper.Instance.RaiseNewNPCRemovedEntries(readResult.PreviousNPC.Keys.ToList());
+                    AppContextHelper.Instance.RaiseNewNPCRemovedEntries(readResult.RemovedNPC.Keys.ToList());
                 }
-                if (readResult.PreviousPC.Any())
+                if (readResult.RemovedPC.Any())
                 {
-                    AppContextHelper.Instance.RaiseNewPCRemovedEntries(readResult.PreviousPC.Keys.ToList());
+                    AppContextHelper.Instance.RaiseNewPCRemovedEntries(readResult.RemovedPC.Keys.ToList());
                 }
 
                 #endregion
